@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header class="header">
+    <div class="logo">
+        <h1>Aura Viagens</h1>
+    </div>
+
+    <!-- Checkbox invisível que controla o estado do menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <!-- Label que funciona como o botão do menu hambúrguer -->
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Menu de Navegação -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre" >Sobre Nós</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+             <li><a href="#formulario">Formulario</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <h1>Descubra o Mundo com a Aura</h1>
+    <p>Sua próxima aventura começa aqui.</p>
+    <a href="#contato" class="btn-hero">Solicitar Orçamento</a>
+</section>
+
+<section class="sobre" id="sobre">
+    <h2>Quem Somos:</h2>
+    <p>Na Aura Viagens, transformamos seus sonhos de viagem em realidade. Planejamos roteiros personalizados com total segurança, conforto e suporte 24 horas para você aproveitar cada momento sem preocupações.</p>
+</section>
+
+<section class="destinos" id="destinos">
+    <div class="item">
+        <h3>Roma/Italia</h3>
+        <img src="ROMA.jpg" alt="coliseu">
+        <p>R$8.500,00</p>
+
+    </div>
+
+
+    <div class="item">
+        <h3>Colônia/Alemanha</h3>
+        <img src="alemanha].jpg" alt="alemanha">
+        <p>R$7.000,00</p>
+    </div>
+
+
+    <div class="item">
+        <h3>Norte da China</h3>
+        <img src="china.jpg" alt="china">
+        <p>R$15.500,00</p>
+    </div>
+</section>
+
+<section id="formulario" class="secao-contato">
+    <h2>Fale Conosco</h2>
+    <p>Preencha o formulário abaixo para solicitar um orçamento para sua viagem.</p>
+
+    <form class="formulario-contato">
+        <!-- Campo Nome -->
+        <div class="campo">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+
+        <!-- Campo E-mail -->
+        <div class="campo">
+            <label for="email">E-mail de Contato:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+
+        <!-- Campo de Seleção (Destino) -->
+        <div class="campo">
+            <label for="destino">Destino de Interesse:</label>
+            <select id="destino" name="destino" required>
+                <option value="" disabled selected>Selecione um destino...</option>
+                <option value="roma/italia">Roma/Italia</option>
+                <option value="colonia/alemanha">Colonia/Alemanha</option>
+                <option value="china">Norte da China</option>
+                <option value="outro">Outro destino</option>
+            </select>
+        </div>
+
+        <!-- Campo Mensagem -->
+        <div class="campo" >
+            <label for="mensagem">Mensagem / Observações:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos mais sobre a viagem dos seus sonhos..."></textarea>
+        </div>
+
+        <!-- Botão Enviar -->
+        <button type="submit" class="btn-enviar">Enviar Pedido</button>
+    </form>
+</section>
+
+<footer class="footer" id="contato">
+    <div class="footer-container">
+        <!-- Coluna 1: Sobre a Empresa -->
+        <div class="footer-col">
+            <h3>Aura Viagens</h3>
+            <p>Sua próxima aventura começa aqui. Transformando sonhos em memórias inesquecíveis.</p>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        <div class="footer-col">
+            <h4>Links Úteis</h4>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 3: Contato e Redes Sociais -->
+        <div class="footer-col">
+            <h4>Fale Conosco</h4>
+            <p>Email: contato@auraviagens.com.br</p>
+            <p>Telefone: (11) 4004-9999</p>
+            <div class="redes-sociais">
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linha inferior de Direitos Autorais -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Aura Viagens & Experiências. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #0f2b48;
+    font-family: sans-serif;
+}
+
+
+/* Configuração geral do cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f2b48; /* Azul escuro da Aura */
+    color: white;
+    padding: 1rem 2rem;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Esconde o checkbox original */
+.menu-toggle {
+    display: none;
+}
+
+/* Estilo do ícone hambúrguer (as três barrinhas) */
+.hamburger {
+    display: none; /* Fica oculto no computador */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Estilo dos links de navegação (Desktop) */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #00a896; /* Verde-água da Aura */
+}
+
+
+.hero{
+    background-image: url(5.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+   flex-direction: column;
+}
+
+.hero h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top:250px ;
+  font-size: 3.2rem;
+  color: #0f2b48;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;   /* Empilha o título, texto e botão */
+    justify-content: center; /* Centraliza na VERTICAL */
+    align-items: center;     /* Centraliza na HORIZONTAL */
+    text-align: center;      /* Garante alinhamento do texto */
+    min-height: 80vh;        /* Dá altura para a seção Hero */
+}
+
+/* Estilo adicional para o botão */
+.btn-hero {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #00a896;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Dá um espaço em relação ao texto */
+    transition: .4s;
+}
+
+
+.btn-hero:hover{
+    background-color: #31567c;
+}
+
+.hero h1{
+    font-size: 45px;
+    color: #091a2b;
+}
+
+.hero p{
+    font-size: 26px;
+    color: #091a2b;
+}
+
+.sobre{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:#0f2b48 ;
+}
+
+.sobre h2{
+    padding-bottom: 20px;
+    font-size: 2.1rem;
+    color: white;
+}
+
+.sobre p{
+    padding: 0px 50px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.destinos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #31567c;
+}
+
+.item img{
+    width: 330px;
+    border-radius: 10px;
+}
+
+.item{
+    background-color: #00a896;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;   
+    height: 300px;
+    margin: 40px;
+    transition: 0.5s;
+}
+
+.item h3{
+    padding-bottom:13px;
+}
+
+.item p{
+    padding-top: 13px;
+}
+
+.item:hover{
+    transform: scale(1.1);
+}
+
+/* Container da Seção de Contato */
+
+.secao-contato {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+.secao-contato h2 {
+    color: #0f2b48; /* Azul escuro da Aura */
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.secao-contato p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Organização de cada grupo (Label + Input) */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #0f2b48;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo padrão para todos os inputs, selects e textareas */
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao clicar/focar no campo */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #00a896; /* Verde-água da Aura */
+}
+
+/* Estilo do Botão */
+.btn-enviar {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #00a896;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #0f2b48; /* Muda para o azul ao passar o mouse */
+}
+
+/* Configuração Geral do Rodapé */
+.footer {
+    background-color: #0f2b48; /* Azul escuro da Aura */
+    color: #ffffff;
+    padding-top: 3rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    /* Cria 3 colunas flexíveis */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Estilo das Colunas */
+.footer-col h3, 
+.footer-col h4 {
+    color: #00a896; /* Verde-água da Aura */
+    margin-bottom: 1rem;
+}
+
+.footer-col p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-col ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #00a896;
+}
+
+/* Links de Redes Sociais */
+.redes-sociais {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.redes-sociais a {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.redes-sociais a:hover {
+    background-color: #00a896;
+}
+
+/* Barra de Direitos Autorais */
+.footer-bottom {
+    background-color: #091a2b; /* Tom de azul ainda mais escuro */
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 3rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsividade: Telas menores que 768px (Celulares e Tablets) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Mostra o botão hambúrguer no celular */
+    }
+
+    .nav-menu {
+        display: none; /* Oculta o menu por padrão no celular */
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0f2b48;
+        padding: 1.5rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    /* O TRUQUE SEM JS: Quando o checkbox for checado, mostra o menu */
+    .menu-toggle:checked ~ .nav-menu {
+        display: block;
+    }
+
+    .hero button{
+        margin-left: 180px;
+    }
+
+    .destinos{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================================
+   CONFIGURAÇÃO EXCLUSIVA PARA CELULARES / MOBILE
+   =================================================== */
+@media (max-width: 768px) {
+    /* Ajustes na Seção Hero */
+    .hero {
+        min-height: 60vh;
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Remove o desalinhamento do botão no celular */
+    .hero button,
+    .hero .btn-hero {
+        margin-left: 0 !important;
+    }
+
+    /* Ajustes nos Cards de Destinos */
+    .destinos {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .item {
+        height: auto;
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    .item img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    /* Ajuste da Seção de Contato */
+    .secao-contato {
+        width: 90%;
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+
+    /* Ajustes do Rodapé */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+
+    .sobre{
+        height: 400px;
+    }
+}
